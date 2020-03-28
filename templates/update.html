@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h1 style="text-align: center">Update Student Information Database</h1>
+
+  
+    <div class="form">
+        <form action ="/update/{{task.id}}",method="POST">
+            <input type ="text"  id="content"  value="{{task.content}}">
+            <input type ="text"  name="content"  value="{{task.content}}">
+            <input type ="text"  last_name="content" value="{{task.content}}">
+            <input type ="text"  dob="content" value="{{task.content}}">
+            <input type ="text"  Amount_Due="content" value="{{task.content}}">
+            <input type = "submit" value = "Update" value="{{task.content}}">
+        </form>
+    </div>    
+</div>
+{% endblock %}

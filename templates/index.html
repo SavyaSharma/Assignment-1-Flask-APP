@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <h1 style="text-align: center">Student Information Database</h1>
+
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Information</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.id}}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{task.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}    
+    </table>
+    <tr>
+        <th>  _________1.ID_________          </th>
+
+        <th>       _______2.Name________        </th>
+        
+        <th>         ______3.Last_Name______        </th>
+        
+        <th>          ________4.Dob________        </th>
+        
+        <th>         _____5.Amount_Due_____        </th>
+    </tr>
+    <div class="form">
+        <form action ="/",method="POST">
+            <input type ="text"  id="content" >
+            <input type ="text"  name="content" >
+            <input type ="text"  last_name="content" >
+            <input type ="text"  dob="content" >
+            <input type ="text"  Amount_Due="content" >
+            <input type = "submit" value = "Add student Info" >
+        </form>
+    </div>
+</div>
+{% endblock %}
